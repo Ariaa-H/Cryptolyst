@@ -102,7 +102,39 @@ The `vocabulary` folder should contain `.txt` files with one word per line. The 
 This project uses a customized and modified version of standard wordlists for improved performance and relevance. You can use any comprehensive wordlist, such as those derived from SCOWL.
 
 ---
+## Future Improvements
 
+While this project currently supports a wide range of decoders, several enhancements could potentially improve its effectiveness and coverage:
+
+- **Polybuis Square-Based Decoders Support**  
+  Currently not implemented due to limitations in word segmentation. When decoding Polybius Square, spaces between words are often lost, resulting in low accuracy when comparing against the dictionary. A smarter word segmentation or contextual analysis system would help fix this issue.
+
+- **Additional Cipher Support**  
+  Planned additions include:
+  - Bacon Decoder
+  - Vigenère Decoder
+  - ADFGVX and ADFGX Decoders
+  - Nihilist Decoder
+  - Trifid Decoder
+  - Bifid Decoder
+  - Enigma-style simulations
+
+- **Improved Word Segmentation**  
+  Integrating advanced NLP techniques or using pre-trained language models to restore spaces and punctuation in decoders that strip formatting (e.g., Bacon, Polybius).
+
+- **Optional GUI**  
+  A future version may include a graphical interface for easier use by non-technical users.
+
+- **Decoder Confidence Ranking**  
+  Improve result ranking by adding weighted confidence scoring per decoder, using heuristics beyond just word matching.
+
+---
+
+## Contributing
+
+Want to add a decoder or feature? Add your decoder function to `decoders.py`, make sure it returns the correct format, and include it in the `run_decoders()` list.
+
+---
 ## Credits
 - **SCOWL & 12dicts** – For dictionary wordlists
   - Website: http://wordlist.aspell.net/
